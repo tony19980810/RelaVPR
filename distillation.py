@@ -34,7 +34,7 @@ import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
 from multiprocessing import freeze_support
 if __name__ == '__main__':
-    # 在 Windows 系统下，使用多进程时需要调用 freeze_support()
+    
 
 
     freeze_support()
