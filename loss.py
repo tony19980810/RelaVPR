@@ -35,22 +35,7 @@ class LinearDistillLoss2(nn.Module):
        
         return F.mse_loss(student_expanded, teacher_feat)
 
-def CKALoss(SH,TH):
-    eps=1e-8
-    dT = TH.size(-1)
-    dS = SH.size(-1)
-    SH = SH.view(-1, dS).to(SH.device, torch.float64)
-    TH = TH.view(-1, dT).to(SH.device, torch.float64)
 
-
-    SH = SH - SH.mean(0, keepdim=True)
-    TH = TH - TH.mean(0, keepdim=True)
-
-    num = torch.norm(SH.t().matmul(TH), 'fro')
-    den1 = torch.norm(SH.t().matmul(SH), 'fro') + eps
-    den2 = torch.norm(TH.t().matmul(TH), 'fro') + eps
-
-    return 1 - num / torch.sqrt(den1 * den2)
 
 class LinearDistillLoss(nn.Module):
     def __init__(self, student_dim=3072, teacher_dim=6144):
@@ -71,9 +56,7 @@ class LinearDistillLoss(nn.Module):
 
 
 def distillation_loss(student_feature, teacher_feature):
-    # 对教师特征进行平均池化，使其维度与学生特征一致
-
-    # 计算蒸馏损失，这里使用均方误差损失
+   
     loss = F.mse_loss(student_feature, teacher_feature)
     return loss
 
@@ -83,10 +66,10 @@ class RKDConfidenceHardLoss_final(nn.Module):
         self,
         student_dim=3072,
         teacher_dim=6144,
-        topk_ratio=0.1,       # 最近负样本比例
+        topk_ratio=0.1,       
         tau=0.03,
-        low_th=0.3,           # 保留接口；当前未使用
-        sampling_ratio=0.9,   # 论文中的 rho
+        low_th=0.3,          
+        sampling_ratio=0.9,   
         hard_ratio=0.1,
         lambda_hard=0.001,
         debug=False,
