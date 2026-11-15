@@ -28,7 +28,6 @@ if __name__ == '__main__':
 
     ######################################### SETUP #########################################
     places = ['sped','msls_val', 'amstertime','pitts30k', 'nordland','pitts250k']
-    # places = ['pitts250k', 'amstertime','pitts30k', 'nordland']
     args = parser_RelaVPR_two_teacher.parse_arguments_win()
     model = network_RelaVPR_two_teacher.VPRmodel_small(args)
 
@@ -37,7 +36,7 @@ if __name__ == '__main__':
     total_params = sum(p.numel() for p in model.parameters())
     print(f"The entire parameters: {total_params / 1e6:.4f}M")
 
-    # 保存测试结果
+ 
     result_file = "./RelaVPR_two_teacher.txt"
 
     with open(result_file, "w") as f:
