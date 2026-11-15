@@ -38,12 +38,12 @@ python distillation.py
 
 ## 🧩Evaluation
 
-Pleas download the model (single teacher) weights [LINK]() into the directory, and use the following code for evaluation:
+Pleas download the model (single teacher) weights [LINK](https://drive.google.com/file/d/1Vm1dYf8Kh7d9QdZntOECFrpoBKo9hkwU/view?usp=drive_link) into the directory, and use the following code for evaluation:
 ```bash
 python eval.py
 ```
 
-Pleas download the model (two teacher) weights [LINK]() into the directory, and use the following code for evaluation:
+Pleas download the model (two teacher) weights [LINK](https://drive.google.com/file/d/1qRatEZfwCspzOJUZ3wrXz-1LvXb0MIZ2/view?usp=drive_link) into the directory, and use the following code for evaluation:
 ```bash
 python eval_two_teacher.py
 ```
