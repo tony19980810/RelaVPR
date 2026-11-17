@@ -50,7 +50,7 @@ python eval_two_teacher.py
 
 ## Acknowledgements
 
-We thank the authors of [DINOv2](https://github.com/facebookresearch/dinov2), ImAge, [EDTformer](https://github.com/Tong-Jin01/EDTformer), [CricaVPR](https://github.com/Lu-Feng/CricaVPR), [BoQ](https://github.com/amaralibey/Bag-of-Queries), and [SALAD](https://github.com/serizba/salad) for their contributions. We also thank [GSV-Cities](https://github.com/amaralibey/gsv-cities), the [Visual Geo-localization Benchmark](https://github.com/gmberton/deep-visual-geo-localization-benchmark), and [VPR-datasets-downloader](https://github.com/gmberton/VPR-datasets-downloader) for their dataset and evaluation resources.
+We thank the authors of [DINOv2](https://github.com/facebookresearch/dinov2), [ImAge](https://github.com/Lu-Feng/ImAge), [EDTformer](https://github.com/Tong-Jin01/EDTformer), [CricaVPR](https://github.com/Lu-Feng/CricaVPR), [BoQ](https://github.com/amaralibey/Bag-of-Queries), and [SALAD](https://github.com/serizba/salad) for their contributions. We also thank [GSV-Cities](https://github.com/amaralibey/gsv-cities), the [Visual Geo-localization Benchmark](https://github.com/gmberton/deep-visual-geo-localization-benchmark), and [VPR-datasets-downloader](https://github.com/gmberton/VPR-datasets-downloader) for their dataset and evaluation resources.
 
 
 
